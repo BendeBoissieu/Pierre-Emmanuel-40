@@ -16,12 +16,11 @@ class CardsController < ApplicationController
   end
 
   def create
-    @cart = Cart.new(card_params)
-      if @card.save
-        @card_count = @cards.size
-        redirect_to = cards_path
-      else
-        rende :new
+    @card = Card.new(card_params)
+
+    @card.save
+    redirect_to cards_path
+
   end
 
   private

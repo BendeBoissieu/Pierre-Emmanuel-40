@@ -1,2 +1,19 @@
-<h1>Cards#new</h1>
-<p>Find me in app/views/cards/new.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1>Envoyer une nouvelle carte</h1>
+
+      <%= simple_form_for [@card] do |f| %>
+
+      <%= f.input :name %>
+      <%= f.input :title %>
+      <%= f.input :content %>
+
+
+
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
