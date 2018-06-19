@@ -29,4 +29,4 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-gem 'carrierwave'
+gem 'carrierwave', '~> 1.2'

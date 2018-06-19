@@ -198,7 +198,7 @@ DEPENDENCIES
   autoprefixer-rails
   bootsnap
   bootstrap-sass (~> 3.3)
-  carrierwave
+  carrierwave (~> 1.2)
   figaro
   font-awesome-sass (~> 5.0.9)
   jbuilder (~> 2.0)
