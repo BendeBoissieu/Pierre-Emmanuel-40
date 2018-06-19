@@ -6,35 +6,24 @@
     </div>
   </div>
 
+ <div class="row">
+<% @cards.each do |card| %>
 
 
-  <div class="row">
-    <% @cards.each do |card| %>
-      <div class="col-4">
-        <div class="card-card">
-          <div class="card-card-image" style="background-image: url('<%= card.avatar %>')"></div>
-          <div class="card-card-content">
-            <div class="card-card-title">
-              <h4><%= card.name %></h4>
-            </div>
-            <p><%= card.content %></p>
-            <div class="flex">
-              <div class="flex">
-                <i class="material-icons mr-2">people</i><span></span>
-              </div>
-              <div class="flex ml-3">
-                <i class="material-icons mr-2">euro_symbol</i>
-              </div>
-            </div>
-          </div>
-          <div class="card-card-actions">
-            <%= link_to 'More info', card_path(card) %>
-            <a href="#" class="ml-3 text-warning">Edit</a>
-          </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/random');">
+        <div class="card-category"><%= card.name %></div>
+        <div class="card-description">
+          <h2><%= card.title %></h2>
+          <p><%= card.content  %></p>
         </div>
+        <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+        <a class="card-link" href="#" ></a>
       </div>
-    <% end %>
-  </div>
+    </div>
+
+  <% end %>
 </div>
+
 
 

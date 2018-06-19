@@ -19,7 +19,6 @@ class CardsController < ApplicationController
     @card = Card.new(card_params)
 
     @card.save
-    raise
     redirect_to cards_path
 
   end
