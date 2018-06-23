@@ -1,13 +1,40 @@
-<h1>Cards#show</h1>
-<p>Find me in app/views/cards/show.html.erb</p>
 
 
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/random');">
-  <div class="card-category">Popular</div>
+
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path '40-b.jpg' %>');">
+  <div class="card-category"><%= @card.name  %></div>
   <div class="card-description">
-    <h2>Le Wagon Shanghai</h2>
-    <p>Very cool city, the best</p>
+
   </div>
-  <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-  <a class="card-link" href="#" ></a>
+
+</div>
+
+
+<div class="container">
+
+    <div class="col-xs-12">
+
+
+
+
+     <!--  link_to "Modify the cocktail", root_path  -->
+
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+
+         <h3><%= @card.title %></h2>
+    <p><%= @card.content  %></p>
+    </div>
+        </tbody>
+      </table>
+
+
+    </div>
+    <%= link_to "Voir toutes les cartes", cards_path, class: "btn btn-primary btn-lg" %>
+  <br>
+  <br>
+  <br>
+  <br>
+   <%= link_to "Effacer la carte", card_path(@card), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-primary'%>
+  </div>
 </div>
